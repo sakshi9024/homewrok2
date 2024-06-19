@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% block outlet %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Age</th>
+        <th scope="col">Address</th>
+        <th scope="col">Phone_no</th>
+        <th scope="col">Date</th>
+        <th scope="col">Image</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for i in data %}
+      <tr>
+        <th scope="row">{{i.id}}</th>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.phone_no}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.image}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endblock outlet %}
